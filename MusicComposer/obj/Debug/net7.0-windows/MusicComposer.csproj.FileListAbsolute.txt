@@ -62,3 +62,32 @@ C:\Users\User\Desktop\Test\MusicComposer\bin\Debug\net7.0-windows\NAudio.WinForm
 C:\Users\User\Desktop\Test\MusicComposer\bin\Debug\net7.0-windows\NAudio.WinMM.dll
 C:\Users\User\Desktop\Test\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.csproj.AssemblyReference.cache
 C:\Users\User\Desktop\Test\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.csproj.CopyComplete
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\bin\Debug\net7.0-windows\MusicComposer.exe
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\bin\Debug\net7.0-windows\MusicComposer.deps.json
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\bin\Debug\net7.0-windows\MusicComposer.runtimeconfig.json
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\bin\Debug\net7.0-windows\MusicComposer.dll
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\bin\Debug\net7.0-windows\MusicComposer.pdb
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\bin\Debug\net7.0-windows\NAudio.dll
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\bin\Debug\net7.0-windows\NAudio.Asio.dll
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\bin\Debug\net7.0-windows\NAudio.Core.dll
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\bin\Debug\net7.0-windows\NAudio.Midi.dll
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\bin\Debug\net7.0-windows\NAudio.Wasapi.dll
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\bin\Debug\net7.0-windows\NAudio.WinForms.dll
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\bin\Debug\net7.0-windows\NAudio.WinMM.dll
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.csproj.AssemblyReference.cache
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.ComposeControl.resources
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.MainFrame.resources
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.MenuControl.resources
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.Properties.Resources.resources
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.TracksControl.resources
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.csproj.GenerateResource.cache
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.GeneratedMSBuildEditorConfig.editorconfig
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.AssemblyInfoInputs.cache
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.AssemblyInfo.cs
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.csproj.CoreCompileInputs.cache
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.csproj.CopyComplete
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.dll
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\refint\MusicComposer.dll
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.pdb
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.genruntimeconfig.cache
+J:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\ref\MusicComposer.dll

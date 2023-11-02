@@ -12,13 +12,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading.Channels;
+using System.Collections;
 
 namespace MusicComposer
 {
     public partial class ComposeControl : UserControl
     {
         int pos = 0, nts = 0, currentNote = 0, currentDuration = 500;
-        MidiOut play;
+        private MidiOut play;
+        private List<Note> track = new List<Note>();
         private int[] notes = {
             24, 25, 26, 27, 28, 29, 30, 31, 32, 33,
             34, 35, 36, 37, 38, 39, 40, 41, 42, 43,
@@ -94,6 +96,57 @@ namespace MusicComposer
                 play.Send(MidiMessage.StopNote(notes[currentNote], 0, 1).RawData);
             });
             thread.Start();
+
+            /*foreach (Note note in track)
+            {
+                play.Send(MidiMessage.StartNote(note.getNumber(), 127, 1).RawData);
+                Thread.Sleep(note.getDuration());
+                play.Send(MidiMessage.StopNote(note.getNumber(), 0, 1).RawData);
+            }*/
+        }
+        private void addNoteButton_Click(object sender, EventArgs e)
+        {
+            if (pos == track.Count && track.Count < 60)
+            {
+                track.Add(new Note(notes[currentNote], currentDuration));
+                noteCount.Text = track.Count.ToString();
+                pos += 1;
+                position.Text = (pos + 1).ToString();
+            }
+            else if (pos < track.Count)
+            {
+                track[pos] = new Note(notes[currentNote], currentDuration);
+            }
+        }
+
+        public void previousNoteButton_Click(object sender, EventArgs e)
+        {
+            if (pos > 0)
+            {
+                pos -= 1;
+                currentNote = track[pos].getNumber() - 24;
+                currentDuration = track[pos].getDuration();
+                noteLabel.Text = noteConv(notes[currentNote]).ToString();
+                durationLabel.Text = currentDuration.ToString();
+                position.Text = (pos + 1).ToString();
+            }
+        }
+        public void nextNoteButton_Click(object sender, EventArgs e)
+        {
+            if (pos < track.Count)
+            {
+                pos += 1;
+            }
+
+            if (pos < track.Count)
+            {
+                currentNote = track[pos].getNumber() - 24;
+                currentDuration = track[pos].getDuration();
+                noteLabel.Text = noteConv(notes[currentNote]).ToString();
+                durationLabel.Text = currentDuration.ToString();
+            }
+
+            position.Text = (pos + 1).ToString();
         }
 
         public string noteConv(int noteNumber)

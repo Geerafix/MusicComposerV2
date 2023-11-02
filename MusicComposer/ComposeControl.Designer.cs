@@ -42,6 +42,9 @@ namespace MusicComposer
             durationUp = new Button();
             durationDown = new Button();
             playNoteButton = new Button();
+            addNoteButton = new Button();
+            previousNoteButton = new Button();
+            nextNoteButton = new Button();
             SuspendLayout();
             // 
             // positionLabel
@@ -157,18 +160,51 @@ namespace MusicComposer
             // 
             // playNoteButton
             // 
-            playNoteButton.Location = new Point(37, 334);
+            playNoteButton.Location = new Point(37, 350);
             playNoteButton.Name = "playNoteButton";
-            playNoteButton.Size = new Size(94, 158);
+            playNoteButton.Size = new Size(94, 60);
             playNoteButton.TabIndex = 11;
             playNoteButton.Text = "Play";
             playNoteButton.UseVisualStyleBackColor = true;
             playNoteButton.Click += playNoteButton_Click;
             // 
+            // addNoteButton
+            // 
+            addNoteButton.Location = new Point(37, 410);
+            addNoteButton.Name = "addNoteButton";
+            addNoteButton.Size = new Size(94, 60);
+            addNoteButton.TabIndex = 12;
+            addNoteButton.Text = "Add";
+            addNoteButton.UseVisualStyleBackColor = true;
+            addNoteButton.Click += addNoteButton_Click;
+            // 
+            // previousNoteButton
+            // 
+            previousNoteButton.Location = new Point(192, 81);
+            previousNoteButton.Name = "previousNoteButton";
+            previousNoteButton.Size = new Size(94, 29);
+            previousNoteButton.TabIndex = 13;
+            previousNoteButton.Text = "<";
+            previousNoteButton.UseVisualStyleBackColor = true;
+            previousNoteButton.Click += previousNoteButton_Click;
+            // 
+            // nextNoteButton
+            // 
+            nextNoteButton.Location = new Point(513, 81);
+            nextNoteButton.Name = "nextNoteButton";
+            nextNoteButton.Size = new Size(94, 29);
+            nextNoteButton.TabIndex = 14;
+            nextNoteButton.Text = ">";
+            nextNoteButton.UseVisualStyleBackColor = true;
+            nextNoteButton.Click += nextNoteButton_Click;
+            // 
             // ComposeControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(nextNoteButton);
+            Controls.Add(previousNoteButton);
+            Controls.Add(addNoteButton);
             Controls.Add(playNoteButton);
             Controls.Add(durationDown);
             Controls.Add(durationUp);
@@ -200,5 +236,8 @@ namespace MusicComposer
         private Button durationUp;
         private Button durationDown;
         private Button playNoteButton;
+        private Button addNoteButton;
+        private Button previousNoteButton;
+        private Button nextNoteButton;
     }
 }
