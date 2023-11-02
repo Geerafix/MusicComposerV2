@@ -35,26 +35,32 @@
             // 
             // exitButton
             // 
+            exitButton.Cursor = Cursors.Hand;
+            exitButton.Font = new Font("Century Gothic", 16F, FontStyle.Regular, GraphicsUnit.Point);
             exitButton.Location = new Point(500, 540);
             exitButton.Name = "exitButton";
             exitButton.Size = new Size(200, 100);
-            exitButton.TabIndex = 0;
+            exitButton.TabIndex = 4;
             exitButton.Text = "Exit";
             exitButton.UseVisualStyleBackColor = true;
             exitButton.Click += exitButton_Click;
             // 
             // composeButton
             // 
+            composeButton.Cursor = Cursors.Hand;
+            composeButton.Font = new Font("Century Gothic", 16F, FontStyle.Regular, GraphicsUnit.Point);
             composeButton.Location = new Point(800, 440);
             composeButton.Name = "composeButton";
             composeButton.Size = new Size(200, 100);
-            composeButton.TabIndex = 1;
+            composeButton.TabIndex = 3;
             composeButton.Text = "Compose";
             composeButton.UseVisualStyleBackColor = true;
             composeButton.Click += composeButton_Click;
             // 
             // tracksButton
             // 
+            tracksButton.Cursor = Cursors.Hand;
+            tracksButton.Font = new Font("Century Gothic", 16F, FontStyle.Regular, GraphicsUnit.Point);
             tracksButton.Location = new Point(200, 440);
             tracksButton.Name = "tracksButton";
             tracksButton.Size = new Size(200, 100);
@@ -66,25 +72,28 @@
             // titleLabel
             // 
             titleLabel.AutoSize = true;
-            titleLabel.Font = new Font("Avatarock", 120.2F, FontStyle.Regular, GraphicsUnit.Point);
-            titleLabel.Location = new Point(178, 125);
+            titleLabel.Font = new Font("Century Gothic", 75F, FontStyle.Bold, GraphicsUnit.Point);
+            titleLabel.ForeColor = Color.Teal;
+            titleLabel.Location = new Point(80, 125);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new Size(858, 160);
-            titleLabel.TabIndex = 3;
+            titleLabel.Size = new Size(1046, 147);
+            titleLabel.TabIndex = 1;
             titleLabel.Text = "MusicComposer";
             // 
             // authorLabel
             // 
             authorLabel.AutoSize = true;
-            authorLabel.Font = new Font("Avatarock", 23F, FontStyle.Regular, GraphicsUnit.Point);
-            authorLabel.Location = new Point(986, 765);
+            authorLabel.Font = new Font("Avatarock", 22.8000011F, FontStyle.Italic, GraphicsUnit.Point);
+            authorLabel.ForeColor = Color.LightSeaGreen;
+            authorLabel.Location = new Point(983, 765);
             authorLabel.Name = "authorLabel";
             authorLabel.Size = new Size(214, 31);
-            authorLabel.TabIndex = 4;
+            authorLabel.TabIndex = 0;
             authorLabel.Text = "by Adam Grzeszczuk";
             // 
             // MenuControl
             // 
+            BackColor = Color.DarkSlateGray;
             Controls.Add(authorLabel);
             Controls.Add(titleLabel);
             Controls.Add(tracksButton);

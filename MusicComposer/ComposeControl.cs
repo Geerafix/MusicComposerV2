@@ -31,11 +31,14 @@ namespace MusicComposer
             84, 85, 86, 87, 88, 89, 90, 91, 92, 93,
             94, 95, 96, 97, 98, 99, 100, 101, 102
         };
+        Thread thread, playThread;
+        Boolean run = false;
 
         public ComposeControl()
         {
             InitializeComponent();
             play = new MidiOut(0);
+            stopButton.Hide();
         }
 
         public void toMenuButton_Click(object sender, EventArgs e)
@@ -89,33 +92,45 @@ namespace MusicComposer
 
         private void playNoteButton_Click(object sender, EventArgs e)
         {
-            var thread = new Thread(() =>
+            thread = new Thread(() =>
             {
                 play.Send(MidiMessage.StartNote(notes[currentNote], 127, 1).RawData);
                 Thread.Sleep(currentDuration);
                 play.Send(MidiMessage.StopNote(notes[currentNote], 0, 1).RawData);
             });
             thread.Start();
-
-            /*foreach (Note note in track)
-            {
-                play.Send(MidiMessage.StartNote(note.getNumber(), 127, 1).RawData);
-                Thread.Sleep(note.getDuration());
-                play.Send(MidiMessage.StopNote(note.getNumber(), 0, 1).RawData);
-            }*/
         }
         private void addNoteButton_Click(object sender, EventArgs e)
         {
             if (pos == track.Count && track.Count < 60)
             {
-                track.Add(new Note(notes[currentNote], currentDuration));
+                Note note = new Note(notes[currentNote], currentDuration);
+                track.Add(note);
                 noteCount.Text = track.Count.ToString();
                 pos += 1;
                 position.Text = (pos + 1).ToString();
+                trackNotesListBox.Items.Add(" " + noteConv(notes[currentNote]) + " " + currentDuration);
             }
             else if (pos < track.Count)
             {
                 track[pos] = new Note(notes[currentNote], currentDuration);
+                trackNotesListBox.Items[pos] = (" " + noteConv(notes[currentNote]) + " " + currentDuration);
+            }
+        }
+
+        private void deleteNoteButton_Click(object sender, EventArgs e)
+        {
+            if (pos < track.Count)
+            {
+                Note note = track[pos];
+                track.Remove(note);
+                if (track.Count != 0 && pos != track.Count)
+                {
+                    currentNote = track[pos].getNumber() - 24;
+                    currentDuration = track[pos].getDuration();
+                }
+                noteCount.Text = track.Count.ToString();
+                trackNotesListBox.Items.RemoveAt(pos);
             }
         }
 
@@ -129,6 +144,11 @@ namespace MusicComposer
                 noteLabel.Text = noteConv(notes[currentNote]).ToString();
                 durationLabel.Text = currentDuration.ToString();
                 position.Text = (pos + 1).ToString();
+            }
+
+            if (pos < track.Count)
+            {
+                addNoteButton.Text = "✎";
             }
         }
         public void nextNoteButton_Click(object sender, EventArgs e)
@@ -146,8 +166,49 @@ namespace MusicComposer
                 durationLabel.Text = currentDuration.ToString();
             }
 
+            if (pos == track.Count)
+            {
+                addNoteButton.Text = "+";
+            }
+
             position.Text = (pos + 1).ToString();
         }
+
+        /*        private void playButton_Click(object sender, EventArgs e)
+                {
+                    playButton.Hide();
+                    stopButton.Show();
+                    playThread = new Thread(playing);
+                    run = true;
+                    playThread.Start();
+                }*/
+
+        /*        private void playing(object obj)
+                {
+                    foreach (Note note in track)
+                    {
+                        if (run == true)
+                        {
+                            play.Send(MidiMessage.StartNote(note.getNumber(), 127, 1).RawData);
+                            Thread.Sleep(note.getDuration());
+                            play.Send(MidiMessage.StopNote(note.getNumber(), 0, 1).RawData);
+                        } 
+                        else
+                        {
+                            break;
+                        }
+                    }
+                    stopButton.Hide();
+                    playButton.Show();
+                }*/
+
+        /*        private void stopButton_Click(object sender, EventArgs e)
+                {
+                    stopButton.Hide();
+                    playButton.Show();
+                    run = false;
+
+                }*/
 
         public string noteConv(int noteNumber)
         {
@@ -156,6 +217,5 @@ namespace MusicComposer
             int noteIndex = noteNumber % 12;
             return noteNames[noteIndex] + octave;
         }
-
     }
 }

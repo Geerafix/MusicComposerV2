@@ -45,25 +45,29 @@ namespace MusicComposer
             addNoteButton = new Button();
             previousNoteButton = new Button();
             nextNoteButton = new Button();
+            trackNotesListBox = new ListBox();
+            deleteNoteButtton = new Button();
+            playButton = new Button();
+            stopButton = new Button();
             SuspendLayout();
             // 
             // positionLabel
             // 
             positionLabel.AutoSize = true;
-            positionLabel.Font = new Font("Avatarock", 25F, FontStyle.Regular, GraphicsUnit.Point);
-            positionLabel.Location = new Point(867, 18);
+            positionLabel.Font = new Font("Century Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            positionLabel.Location = new Point(759, 18);
             positionLabel.Name = "positionLabel";
-            positionLabel.Size = new Size(101, 34);
+            positionLabel.Size = new Size(137, 37);
             positionLabel.TabIndex = 0;
             positionLabel.Text = "Position:";
             // 
             // noteCountLabel
             // 
             noteCountLabel.AutoSize = true;
-            noteCountLabel.Font = new Font("Avatarock", 25F, FontStyle.Regular, GraphicsUnit.Point);
-            noteCountLabel.Location = new Point(1027, 18);
+            noteCountLabel.Font = new Font("Century Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            noteCountLabel.Location = new Point(959, 16);
             noteCountLabel.Name = "noteCountLabel";
-            noteCountLabel.Size = new Size(131, 34);
+            noteCountLabel.Size = new Size(189, 37);
             noteCountLabel.TabIndex = 1;
             noteCountLabel.Text = "Note count:";
             // 
@@ -71,15 +75,16 @@ namespace MusicComposer
             // 
             position.AutoSize = true;
             position.BackColor = Color.Transparent;
-            position.Font = new Font("Avatarock", 25F, FontStyle.Regular, GraphicsUnit.Point);
-            position.Location = new Point(959, 17);
+            position.Font = new Font("Century Gothic", 21F, FontStyle.Bold, GraphicsUnit.Point);
+            position.Location = new Point(885, 16);
             position.Name = "position";
-            position.Size = new Size(24, 34);
+            position.Size = new Size(38, 41);
             position.TabIndex = 2;
             position.Text = "1";
             // 
             // toMenuButton
             // 
+            toMenuButton.Cursor = Cursors.Hand;
             toMenuButton.Location = new Point(3, 3);
             toMenuButton.Name = "toMenuButton";
             toMenuButton.Size = new Size(75, 75);
@@ -91,96 +96,104 @@ namespace MusicComposer
             // noteCount
             // 
             noteCount.AutoSize = true;
-            noteCount.Font = new Font("Avatarock", 25F, FontStyle.Regular, GraphicsUnit.Point);
-            noteCount.Location = new Point(1149, 18);
+            noteCount.Font = new Font("Century Gothic", 21F, FontStyle.Bold, GraphicsUnit.Point);
+            noteCount.Location = new Point(1137, 14);
             noteCount.Name = "noteCount";
-            noteCount.Size = new Size(29, 34);
+            noteCount.Size = new Size(38, 41);
             noteCount.TabIndex = 4;
             noteCount.Text = "0";
             // 
             // noteLabel
             // 
             noteLabel.AutoSize = true;
-            noteLabel.Font = new Font("Avatarock", 120F, FontStyle.Regular, GraphicsUnit.Point);
-            noteLabel.Location = new Point(161, 334);
+            noteLabel.Font = new Font("Century Gothic", 85F, FontStyle.Bold, GraphicsUnit.Point);
+            noteLabel.ForeColor = Color.Teal;
+            noteLabel.Location = new Point(133, 360);
             noteLabel.Name = "noteLabel";
-            noteLabel.Size = new Size(179, 158);
+            noteLabel.Size = new Size(261, 168);
             noteLabel.TabIndex = 5;
             noteLabel.Text = "C1";
             // 
             // durationLabel
             // 
             durationLabel.AutoSize = true;
-            durationLabel.Font = new Font("Avatarock", 120F, FontStyle.Regular, GraphicsUnit.Point);
-            durationLabel.Location = new Point(482, 334);
+            durationLabel.Font = new Font("Century Gothic", 85F, FontStyle.Bold, GraphicsUnit.Point);
+            durationLabel.ForeColor = Color.Teal;
+            durationLabel.Location = new Point(495, 359);
             durationLabel.Name = "durationLabel";
-            durationLabel.Size = new Size(269, 158);
+            durationLabel.Size = new Size(310, 168);
             durationLabel.TabIndex = 6;
             durationLabel.Text = "500";
             // 
             // noteUp
             // 
-            noteUp.Location = new Point(192, 163);
+            noteUp.Cursor = Cursors.Hand;
+            noteUp.Location = new Point(167, 200);
             noteUp.Name = "noteUp";
             noteUp.Size = new Size(94, 132);
             noteUp.TabIndex = 7;
-            noteUp.Text = "Up";
             noteUp.UseVisualStyleBackColor = true;
             noteUp.Click += noteUp_Click;
             // 
             // noteDown
             // 
-            noteDown.Location = new Point(192, 523);
+            noteDown.Cursor = Cursors.Hand;
+            noteDown.Location = new Point(167, 560);
             noteDown.Name = "noteDown";
             noteDown.Size = new Size(94, 132);
             noteDown.TabIndex = 8;
-            noteDown.Text = "Down";
             noteDown.UseVisualStyleBackColor = true;
             noteDown.Click += noteDown_Click;
             // 
             // durationUp
             // 
-            durationUp.Location = new Point(513, 163);
+            durationUp.Cursor = Cursors.Hand;
+            durationUp.Location = new Point(524, 200);
             durationUp.Name = "durationUp";
             durationUp.Size = new Size(94, 132);
             durationUp.TabIndex = 9;
-            durationUp.Text = "Up";
             durationUp.UseVisualStyleBackColor = true;
             durationUp.Click += durationUp_Click;
             // 
             // durationDown
             // 
-            durationDown.Location = new Point(513, 523);
+            durationDown.Cursor = Cursors.Hand;
+            durationDown.Location = new Point(524, 560);
             durationDown.Name = "durationDown";
             durationDown.Size = new Size(94, 132);
             durationDown.TabIndex = 10;
-            durationDown.Text = "Down";
             durationDown.UseVisualStyleBackColor = true;
             durationDown.Click += durationDown_Click;
             // 
             // playNoteButton
             // 
-            playNoteButton.Location = new Point(37, 350);
+            playNoteButton.Cursor = Cursors.Hand;
+            playNoteButton.FlatStyle = FlatStyle.System;
+            playNoteButton.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            playNoteButton.ForeColor = Color.DarkSlateGray;
+            playNoteButton.Location = new Point(47, 372);
             playNoteButton.Name = "playNoteButton";
-            playNoteButton.Size = new Size(94, 60);
+            playNoteButton.Size = new Size(80, 80);
             playNoteButton.TabIndex = 11;
-            playNoteButton.Text = "Play";
             playNoteButton.UseVisualStyleBackColor = true;
             playNoteButton.Click += playNoteButton_Click;
             // 
             // addNoteButton
             // 
-            addNoteButton.Location = new Point(37, 410);
+            addNoteButton.Cursor = Cursors.Hand;
+            addNoteButton.FlatStyle = FlatStyle.System;
+            addNoteButton.Font = new Font("Century Gothic", 25F, FontStyle.Bold, GraphicsUnit.Point);
+            addNoteButton.Location = new Point(47, 453);
             addNoteButton.Name = "addNoteButton";
-            addNoteButton.Size = new Size(94, 60);
+            addNoteButton.Size = new Size(80, 80);
             addNoteButton.TabIndex = 12;
-            addNoteButton.Text = "Add";
             addNoteButton.UseVisualStyleBackColor = true;
             addNoteButton.Click += addNoteButton_Click;
             // 
             // previousNoteButton
             // 
-            previousNoteButton.Location = new Point(192, 81);
+            previousNoteButton.Cursor = Cursors.Hand;
+            previousNoteButton.Location = new Point(167, 118);
             previousNoteButton.Name = "previousNoteButton";
             previousNoteButton.Size = new Size(94, 29);
             previousNoteButton.TabIndex = 13;
@@ -190,7 +203,8 @@ namespace MusicComposer
             // 
             // nextNoteButton
             // 
-            nextNoteButton.Location = new Point(513, 81);
+            nextNoteButton.Cursor = Cursors.Hand;
+            nextNoteButton.Location = new Point(524, 118);
             nextNoteButton.Name = "nextNoteButton";
             nextNoteButton.Size = new Size(94, 29);
             nextNoteButton.TabIndex = 14;
@@ -198,10 +212,58 @@ namespace MusicComposer
             nextNoteButton.UseVisualStyleBackColor = true;
             nextNoteButton.Click += nextNoteButton_Click;
             // 
+            // trackNotesListBox
+            // 
+            trackNotesListBox.BackColor = Color.LightSlateGray;
+            trackNotesListBox.BorderStyle = BorderStyle.None;
+            trackNotesListBox.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            trackNotesListBox.ForeColor = Color.Black;
+            trackNotesListBox.FormattingEnabled = true;
+            trackNotesListBox.ItemHeight = 23;
+            trackNotesListBox.Location = new Point(902, 69);
+            trackNotesListBox.MultiColumn = true;
+            trackNotesListBox.Name = "trackNotesListBox";
+            trackNotesListBox.SelectionMode = SelectionMode.None;
+            trackNotesListBox.Size = new Size(295, 713);
+            trackNotesListBox.TabIndex = 15;
+            // 
+            // deleteNoteButtton
+            // 
+            deleteNoteButtton.Location = new Point(343, 118);
+            deleteNoteButtton.Name = "deleteNoteButtton";
+            deleteNoteButtton.Size = new Size(94, 29);
+            deleteNoteButtton.TabIndex = 16;
+            deleteNoteButtton.Text = "Delete";
+            deleteNoteButtton.UseVisualStyleBackColor = true;
+            deleteNoteButtton.Click += deleteNoteButton_Click;
+            // 
+            // playButton
+            // 
+            playButton.Cursor = Cursors.Hand;
+            playButton.Location = new Point(3, 722);
+            playButton.Name = "playButton";
+            playButton.Size = new Size(75, 75);
+            playButton.TabIndex = 17;
+            playButton.Text = "Play";
+            playButton.UseVisualStyleBackColor = true;
+            // 
+            // stopButton
+            // 
+            stopButton.Cursor = Cursors.Hand;
+            stopButton.Location = new Point(3, 722);
+            stopButton.Name = "stopButton";
+            stopButton.Size = new Size(75, 75);
+            stopButton.TabIndex = 18;
+            stopButton.Text = "Stop";
+            stopButton.UseVisualStyleBackColor = true;
+            // 
             // ComposeControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkSlateGray;
+            Controls.Add(deleteNoteButtton);
+            Controls.Add(trackNotesListBox);
             Controls.Add(nextNoteButton);
             Controls.Add(previousNoteButton);
             Controls.Add(addNoteButton);
@@ -239,5 +301,9 @@ namespace MusicComposer
         private Button addNoteButton;
         private Button previousNoteButton;
         private Button nextNoteButton;
+        private ListBox trackNotesListBox;
+        private Button deleteNoteButtton;
+        private Button playButton;
+        private Button stopButton;
     }
 }

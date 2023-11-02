@@ -23,6 +23,7 @@
             // 
             // menuButton
             // 
+            menuButton.Font = new Font("Century Gothic", 16F, FontStyle.Regular, GraphicsUnit.Point);
             menuButton.Location = new Point(800, 440);
             menuButton.Name = "menuButton";
             menuButton.Size = new Size(200, 100);
@@ -34,10 +35,11 @@
             // tracksLabel
             // 
             tracksLabel.AutoSize = true;
-            tracksLabel.Font = new Font("Avatarock", 120.2F, FontStyle.Regular, GraphicsUnit.Point);
-            tracksLabel.Location = new Point(178, 125);
+            tracksLabel.Font = new Font("Century Gothic", 75F, FontStyle.Bold, GraphicsUnit.Point);
+            tracksLabel.ForeColor = Color.Teal;
+            tracksLabel.Location = new Point(80, 125);
             tracksLabel.Name = "tracksLabel";
-            tracksLabel.Size = new Size(409, 160);
+            tracksLabel.Size = new Size(445, 147);
             tracksLabel.TabIndex = 4;
             tracksLabel.Text = "Tracks";
             // 
@@ -45,6 +47,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkSlateGray;
             Controls.Add(tracksLabel);
             Controls.Add(menuButton);
             Name = "TracksControl";
