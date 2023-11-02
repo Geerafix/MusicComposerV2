@@ -22,6 +22,7 @@
         private void composeButton_Click(object sender, EventArgs e)
         {
             (this.ParentForm as MainFrame).toComposeFromMenu();
+            
         }
 
         private void InitializeComponent()
@@ -73,7 +74,7 @@
             // 
             titleLabel.AutoSize = true;
             titleLabel.Font = new Font("Century Gothic", 75F, FontStyle.Bold, GraphicsUnit.Point);
-            titleLabel.ForeColor = Color.Teal;
+            titleLabel.ForeColor = Color.MintCream;
             titleLabel.Location = new Point(80, 125);
             titleLabel.Name = "titleLabel";
             titleLabel.Size = new Size(1046, 147);

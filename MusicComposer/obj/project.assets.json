@@ -487,19 +487,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\Adameq\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "J:\\Mój dysk\\GitHub\\MusicComposerV2\\MusicComposer\\MusicComposer.csproj",
+      "projectUniqueName": "G:\\Mój dysk\\GitHub\\MusicComposerV2\\MusicComposer\\MusicComposer.csproj",
       "projectName": "MusicComposer",
-      "projectPath": "J:\\Mój dysk\\GitHub\\MusicComposerV2\\MusicComposer\\MusicComposer.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "J:\\Mój dysk\\GitHub\\MusicComposerV2\\MusicComposer\\obj\\",
+      "projectPath": "G:\\Mój dysk\\GitHub\\MusicComposerV2\\MusicComposer\\MusicComposer.csproj",
+      "packagesPath": "C:\\Users\\Adameq\\.nuget\\packages\\",
+      "outputPath": "G:\\Mój dysk\\GitHub\\MusicComposerV2\\MusicComposer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Adameq\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -18,8 +18,7 @@ namespace MusicComposer
 {
     public partial class ComposeControl : UserControl
     {
-        int pos = 0, nts = 0, currentNote = 0, currentDuration = 500;
-        private MidiOut play;
+        private int pos = 0, currentNote = 0, currentDuration = 500;
         private List<Note> track = new List<Note>();
         private int[] notes = {
             24, 25, 26, 27, 28, 29, 30, 31, 32, 33,
@@ -31,19 +30,52 @@ namespace MusicComposer
             84, 85, 86, 87, 88, 89, 90, 91, 92, 93,
             94, 95, 96, 97, 98, 99, 100, 101, 102
         };
-        Thread thread, playThread;
-        Boolean run = false;
+        Thread thread;
 
         public ComposeControl()
         {
             InitializeComponent();
-            play = new MidiOut(0);
-            stopButton.Hide();
+            trackNameTextBox.Hide();
         }
-
-        public void toMenuButton_Click(object sender, EventArgs e)
+        private void toMenuButton_Click(object sender, EventArgs e)
         {
             (this.ParentForm as MainFrame).toMenuFromCompose();
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            if (!trackNameTextBox.Visible)
+            {
+                trackNameTextBox.Show();
+                saveButton.Text = "✓";
+            }
+
+            else if (trackNameTextBox.Visible)
+            {
+                if (trackNameTextBox.Text != "")
+                {
+                    string trackName = trackNameTextBox.Text;
+                    trackNameTextBox.Text = null;
+                    StreamWriter writer = new StreamWriter("../../../tracks/" + trackName + ".txt");
+                    foreach (Note note in track)
+                    {
+                        writer.WriteLine(note.getNumber());
+                        writer.WriteLine(note.getDuration());
+                    }
+                    writer.Close();
+                    track.Clear();
+                    pos = 0;
+                    currentNote = 0;
+                    currentDuration = 500;
+                    noteLabel.Text = noteConv(notes[currentNote]);
+                    durationLabel.Text = currentDuration.ToString();
+                    position.Text = 1.ToString();
+                    noteCount.Text = 0.ToString();
+                    trackNotesListBox.Items.Clear();
+                }
+                saveButton.Text = "Save";
+                trackNameTextBox.Hide();
+            }
         }
 
         private void noteUp_Click(object sender, EventArgs e)
@@ -94,9 +126,9 @@ namespace MusicComposer
         {
             thread = new Thread(() =>
             {
-                play.Send(MidiMessage.StartNote(notes[currentNote], 127, 1).RawData);
+                (this.ParentForm as MainFrame).getMidi().Send(MidiMessage.StartNote(notes[currentNote], 127, 1).RawData);
                 Thread.Sleep(currentDuration);
-                play.Send(MidiMessage.StopNote(notes[currentNote], 0, 1).RawData);
+                (this.ParentForm as MainFrame).getMidi().Send(MidiMessage.StopNote(notes[currentNote], 0, 1).RawData);
             });
             thread.Start();
         }
@@ -131,6 +163,11 @@ namespace MusicComposer
                 }
                 noteCount.Text = track.Count.ToString();
                 trackNotesListBox.Items.RemoveAt(pos);
+            }
+
+            if (pos == track.Count)
+            {
+                addNoteButton.Text = "+";
             }
         }
 
@@ -216,6 +253,15 @@ namespace MusicComposer
             int octave = (noteNumber / 12) - 1;
             int noteIndex = noteNumber % 12;
             return noteNames[noteIndex] + octave;
+        }
+        private ArrayList toList(string filename)
+        {
+            ArrayList track = new ArrayList();
+            /*            Scanner scan = new Scanner(new File("characters/" + filename));
+                        while (scan.hasNext()) {
+                            track.add(new Note(Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine())));
+                        }*/
+            return track;
         }
     }
 }

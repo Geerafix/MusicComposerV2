@@ -1,4 +1,6 @@
-﻿namespace MusicComposer
+﻿using NAudio.Midi;
+
+namespace MusicComposer
 {
     partial class MainFrame
     {
@@ -15,13 +17,17 @@
         int width = 1200, height = 800;
 
         #region Windows Form Designer generated code
-        public UserControl menuControl, tracksControl, composeControl;
+        public MenuControl menuControl;
+        public ComposeControl composeControl;
+        public TracksControl tracksControl;
+        public MidiOut play;
 
         private void InitializeComponent()
         {
             menuControl = new MenuControl();
             tracksControl = new TracksControl();
             composeControl = new ComposeControl();
+            this.play = new MidiOut(0);
             SuspendLayout();
             // 
             // menuControl
@@ -36,6 +42,8 @@
             // MainFrame
             // 
             ClientSize = new Size(width, height);
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             Controls.Add(menuControl);
             Controls.Add(tracksControl);
             Controls.Add(composeControl);
@@ -47,11 +55,13 @@
         {
             menuControl.Hide();
             composeControl.Hide();
+            tracksControl.loadTracks();
             tracksControl.Show();
         }
         public void toMenuFromTracks()
         {
             tracksControl.Hide();
+            tracksControl.hideButtons();
             composeControl.Hide();
             menuControl.Show();
         }
@@ -60,10 +70,12 @@
         {
 
         }
+
         public void toTracksFromEdit()
         {
 
         }
+
         public void toComposeFromMenu()
         {
             menuControl.Hide();
@@ -77,6 +89,10 @@
             menuControl.Show();
         }
 
+        public MidiOut getMidi()
+        {
+            return play;
+        }
 
         #endregion
     }
