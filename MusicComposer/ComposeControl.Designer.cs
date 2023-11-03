@@ -30,6 +30,7 @@ namespace MusicComposer
         /// </summary>
         private void InitializeComponent()
         {
+            this.SuspendLayout();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComposeControl));
             positionLabel = new Label();
             noteCountLabel = new Label();
@@ -52,7 +53,6 @@ namespace MusicComposer
             stopButton = new Button();
             saveButton = new Button();
             trackNameTextBox = new TextBox();
-            SuspendLayout();
             // 
             // positionLabel
             // 
@@ -297,6 +297,7 @@ namespace MusicComposer
             trackNameTextBox.Name = "trackNameTextBox";
             trackNameTextBox.Size = new Size(157, 30);
             trackNameTextBox.TabIndex = 19;
+            trackNameTextBox.Visible = false;
             // 
             // ComposeControl
             // 
@@ -324,8 +325,7 @@ namespace MusicComposer
             Controls.Add(positionLabel);
             Name = "ComposeControl";
             Size = new Size(1200, 800);
-            ResumeLayout(false);
-            PerformLayout();
+            this.ResumeLayout();
         }
         #endregion
 

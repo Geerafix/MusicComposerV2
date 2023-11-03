@@ -4,6 +4,9 @@
     <Compile Update="ComposeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="EditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="MainFrame.cs">
       <SubType>Form</SubType>
     </Compile>

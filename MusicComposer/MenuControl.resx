@@ -117,4 +117,159 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="exitButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 16pt</value>
+  </data>
+  <data name="exitButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 540</value>
+  </data>
+  <data name="exitButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 100</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="exitButton.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="exitButton.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="&gt;&gt;exitButton.Name" xml:space="preserve">
+    <value>exitButton</value>
+  </data>
+  <data name="&gt;&gt;exitButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exitButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;exitButton.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="composeButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 16pt</value>
+  </data>
+  <data name="composeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>800, 440</value>
+  </data>
+  <data name="composeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 100</value>
+  </data>
+  <data name="composeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="composeButton.Text" xml:space="preserve">
+    <value>Compose</value>
+  </data>
+  <data name="&gt;&gt;composeButton.Name" xml:space="preserve">
+    <value>composeButton</value>
+  </data>
+  <data name="&gt;&gt;composeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;composeButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;composeButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tracksButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 16pt</value>
+  </data>
+  <data name="tracksButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 440</value>
+  </data>
+  <data name="tracksButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 100</value>
+  </data>
+  <data name="tracksButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tracksButton.Text" xml:space="preserve">
+    <value>Tracks</value>
+  </data>
+  <data name="&gt;&gt;tracksButton.Name" xml:space="preserve">
+    <value>tracksButton</value>
+  </data>
+  <data name="&gt;&gt;tracksButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tracksButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tracksButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="titleLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="titleLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 75pt, style=Bold</value>
+  </data>
+  <data name="titleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 125</value>
+  </data>
+  <data name="titleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1046, 147</value>
+  </data>
+  <data name="titleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="titleLabel.Text" xml:space="preserve">
+    <value>MusicComposer</value>
+  </data>
+  <data name="&gt;&gt;titleLabel.Name" xml:space="preserve">
+    <value>titleLabel</value>
+  </data>
+  <data name="&gt;&gt;titleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;titleLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;titleLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="authorLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="authorLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Avatarock, 22.800001pt, style=Italic</value>
+  </data>
+  <data name="authorLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>983, 765</value>
+  </data>
+  <data name="authorLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 31</value>
+  </data>
+  <data name="authorLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="authorLabel.Text" xml:space="preserve">
+    <value>by Adam Grzeszczuk</value>
+  </data>
+  <data name="&gt;&gt;authorLabel.Name" xml:space="preserve">
+    <value>authorLabel</value>
+  </data>
+  <data name="&gt;&gt;authorLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;authorLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;authorLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1200, 800</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MenuControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

@@ -51,6 +51,7 @@
             // tracksListBox
             // 
             tracksListBox.BackColor = Color.Teal;
+            tracksListBox.Cursor = Cursors.Hand;
             tracksListBox.Font = new Font("Century Gothic", 13F, FontStyle.Bold, GraphicsUnit.Point);
             tracksListBox.FormattingEnabled = true;
             tracksListBox.ItemHeight = 26;
@@ -64,7 +65,7 @@
             // 
             deleteTrackButton.Cursor = Cursors.Hand;
             deleteTrackButton.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            deleteTrackButton.Location = new Point(233, 714);
+            deleteTrackButton.Location = new Point(177, 714);
             deleteTrackButton.Name = "deleteTrackButton";
             deleteTrackButton.RightToLeft = RightToLeft.Yes;
             deleteTrackButton.Size = new Size(50, 50);
@@ -78,7 +79,7 @@
             // 
             modifyTrackButton.Cursor = Cursors.Hand;
             modifyTrackButton.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            modifyTrackButton.Location = new Point(177, 714);
+            modifyTrackButton.Location = new Point(121, 714);
             modifyTrackButton.Name = "modifyTrackButton";
             modifyTrackButton.RightToLeft = RightToLeft.Yes;
             modifyTrackButton.Size = new Size(50, 50);
@@ -92,7 +93,7 @@
             // 
             playTrackButton.Cursor = Cursors.Hand;
             playTrackButton.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            playTrackButton.Location = new Point(121, 714);
+            playTrackButton.Location = new Point(233, 714);
             playTrackButton.Name = "playTrackButton";
             playTrackButton.RightToLeft = RightToLeft.No;
             playTrackButton.Size = new Size(50, 50);
@@ -115,6 +116,7 @@
             Controls.Add(menuButton);
             Name = "TracksControl";
             Size = new Size(1200, 800);
+            Load += TracksControl_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -120,3 +120,4 @@ G:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\refin
 G:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.pdb
 G:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.genruntimeconfig.cache
 G:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\ref\MusicComposer.dll
+G:\Mój dysk\GitHub\MusicComposerV2\MusicComposer\obj\Debug\net7.0-windows\MusicComposer.EditControl.resources
