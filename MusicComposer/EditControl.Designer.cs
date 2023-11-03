@@ -1,7 +1,5 @@
-﻿namespace MusicComposer
-{
-    partial class EditControl
-    {
+﻿namespace MusicComposer {
+    partial class EditControl {
         /// <summary> 
         /// Wymagana zmienna projektanta.
         /// </summary>
@@ -11,10 +9,8 @@
         /// Wyczyść wszystkie używane zasoby.
         /// </summary>
         /// <param name="disposing">prawda, jeżeli zarządzane zasoby powinny zostać zlikwidowane; Fałsz w przeciwnym wypadku.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -26,8 +22,7 @@
         /// Metoda wymagana do obsługi projektanta — nie należy modyfikować 
         /// jej zawartości w edytorze kodu.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditControl));
             positionLabel = new Label();
             noteCountLabel = new Label();
@@ -345,8 +340,7 @@
             PerformLayout();
         }
 
-        private void PlayNoteButton_Click(object sender, EventArgs e)
-        {
+        private void PlayNoteButton_Click(object sender, EventArgs e) {
             throw new NotImplementedException();
         }
         #endregion

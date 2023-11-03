@@ -1,9 +1,6 @@
-namespace MusicComposer
-{
-    public partial class MainFrame : Form
-    {
-        public MainFrame()
-        {
+namespace MusicComposer {
+    public partial class MainFrame : Form {
+        public MainFrame() {
             InitializeComponent();
         }
     }

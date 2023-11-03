@@ -1,15 +1,11 @@
 ﻿using System.Windows.Forms;
 
-namespace MusicComposer
-{
-    partial class TracksControl
-    {
+namespace MusicComposer {
+    partial class TracksControl {
         private System.ComponentModel.IContainer components = null;
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -17,8 +13,7 @@ namespace MusicComposer
 
         #region Kod wygenerowany przez Projektanta składników
 
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             menuButton = new Button();
             tracksLabel = new Label();
             tracksListBox = new ListBox();
@@ -42,11 +37,11 @@ namespace MusicComposer
             // tracksLabel
             // 
             tracksLabel.AutoSize = true;
-            tracksLabel.Font = new Font("Century Gothic", 75F, FontStyle.Bold, GraphicsUnit.Point);
-            tracksLabel.ForeColor = Color.MintCream;
-            tracksLabel.Location = new Point(80, 125);
+            tracksLabel.Font = new Font("Chopin Script", 100.200005F, FontStyle.Regular, GraphicsUnit.Point);
+            tracksLabel.ForeColor = Color.FromArgb(255, 209, 115);
+            tracksLabel.Location = new Point(71, 108);
             tracksLabel.Name = "tracksLabel";
-            tracksLabel.Size = new Size(445, 147);
+            tracksLabel.Size = new Size(546, 227);
             tracksLabel.TabIndex = 4;
             tracksLabel.Text = "Tracks";
             // 
@@ -58,7 +53,7 @@ namespace MusicComposer
             tracksListBox.ForeColor = Color.White;
             tracksListBox.FormattingEnabled = true;
             tracksListBox.ItemHeight = 26;
-            tracksListBox.Location = new Point(121, 288);
+            tracksListBox.Location = new Point(175, 302);
             tracksListBox.Name = "tracksListBox";
             tracksListBox.Size = new Size(361, 420);
             tracksListBox.TabIndex = 5;
@@ -68,7 +63,7 @@ namespace MusicComposer
             // 
             deleteTrackButton.Cursor = Cursors.Hand;
             deleteTrackButton.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            deleteTrackButton.Location = new Point(177, 714);
+            deleteTrackButton.Location = new Point(231, 728);
             deleteTrackButton.Name = "deleteTrackButton";
             deleteTrackButton.RightToLeft = RightToLeft.Yes;
             deleteTrackButton.Size = new Size(50, 50);
@@ -82,7 +77,7 @@ namespace MusicComposer
             // 
             modifyTrackButton.Cursor = Cursors.Hand;
             modifyTrackButton.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            modifyTrackButton.Location = new Point(121, 714);
+            modifyTrackButton.Location = new Point(175, 728);
             modifyTrackButton.Name = "modifyTrackButton";
             modifyTrackButton.RightToLeft = RightToLeft.Yes;
             modifyTrackButton.Size = new Size(50, 50);
@@ -96,7 +91,7 @@ namespace MusicComposer
             // 
             playTrackButton.Cursor = Cursors.Hand;
             playTrackButton.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            playTrackButton.Location = new Point(233, 714);
+            playTrackButton.Location = new Point(287, 728);
             playTrackButton.Name = "playTrackButton";
             playTrackButton.RightToLeft = RightToLeft.No;
             playTrackButton.Size = new Size(50, 50);
@@ -111,11 +106,11 @@ namespace MusicComposer
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
+            Controls.Add(tracksListBox);
+            Controls.Add(tracksLabel);
             Controls.Add(playTrackButton);
             Controls.Add(modifyTrackButton);
             Controls.Add(deleteTrackButton);
-            Controls.Add(tracksListBox);
-            Controls.Add(tracksLabel);
             Controls.Add(menuButton);
             Name = "TracksControl";
             Size = new Size(1200, 800);

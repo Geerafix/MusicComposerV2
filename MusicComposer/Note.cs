@@ -4,36 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicComposer
-{
-    public class Note
-    {
+namespace MusicComposer {
+    public class Note {
         int number;
         int duration;
 
-        public Note(int number, int duration)
-        {
+        public Note(int number, int duration) {
             this.number = number;
             this.duration = duration;
         }
 
-        public int getNumber()
-        {
+        public int getNumber() {
             return this.number;
         }
 
-        public int getDuration()
-        {
+        public int getDuration() {
             return this.duration;
         }
 
-        public void setNumber(int number)
-        {
+        public void setNumber(int number) {
             this.number = number;
         }
 
-        public void setDuration(int duration)
-        {
+        public void setDuration(int duration) {
             this.duration = duration;
         }
     }
