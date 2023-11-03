@@ -80,9 +80,9 @@ namespace MusicComposer
             playTrackButton.Hide();
         }
 
-        private ArrayList toList(string filename)
+        private List<Note> toList(string filename)
         {
-            ArrayList track = new ArrayList();
+            List<Note> track = new List<Note>();
             string[] lines = File.ReadAllLines(path + filename + ".txt");
             for (int i = 0; i < lines.Length; i += 2)
             {

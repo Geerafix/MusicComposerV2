@@ -63,18 +63,18 @@
             // titleLabel
             // 
             resources.ApplyResources(titleLabel, "titleLabel");
-            titleLabel.ForeColor = Color.MintCream;
+            titleLabel.ForeColor = Color.FromArgb(255, 209, 115);
             titleLabel.Name = "titleLabel";
             // 
             // authorLabel
             // 
             resources.ApplyResources(authorLabel, "authorLabel");
-            authorLabel.ForeColor = Color.LightSeaGreen;
+            authorLabel.ForeColor = Color.FromArgb(23, 144, 201);
             authorLabel.Name = "authorLabel";
             // 
             // MenuControl
             // 
-            BackColor = Color.DarkSlateGray;
+            BackColor = Color.Transparent;
             Controls.Add(authorLabel);
             Controls.Add(titleLabel);
             Controls.Add(tracksButton);

@@ -22,24 +22,56 @@ namespace MusicComposer
         public ComposeControl composeControl;
         public TracksControl tracksControl;
         public EditControl editControl;
-        public MidiOut play;
+        public MidiOut play = new MidiOut(0);
 
         private void InitializeComponent()
         {
-            this.SuspendLayout();
             menuControl = new MenuControl();
             tracksControl = new TracksControl();
             composeControl = new ComposeControl();
             editControl = new EditControl();
-            play = new MidiOut(0);
-            menuControl.Show();
-            composeControl.Hide();
-            editControl.Hide();
-            tracksControl.Hide();
+            SuspendLayout();
+            // 
+            // menuControl
+            // 
+            menuControl.BackColor = Color.FromArgb(32, 37, 50);
+            menuControl.Location = new Point(0, 0);
+            menuControl.Name = "menuControl";
+            menuControl.Size = new Size(1200, 800);
+            menuControl.TabIndex = 0;
+            menuControl.Visible = true;
+            // 
+            // tracksControl
+            // 
+            tracksControl.BackColor = Color.Transparent;
+            tracksControl.Location = new Point(0, 0);
+            tracksControl.Name = "tracksControl";
+            tracksControl.Size = new Size(1200, 800);
+            tracksControl.TabIndex = 1;
+            tracksControl.Visible = false;
+            // 
+            // composeControl
+            // 
+            composeControl.BackColor = Color.Transparent;
+            composeControl.Location = new Point(0, 0);
+            composeControl.Name = "composeControl";
+            composeControl.Size = new Size(1200, 800);
+            composeControl.TabIndex = 2;
+            composeControl.Visible = false;
+            // 
+            // editControl
+            // 
+            editControl.BackColor = Color.Transparent;
+            editControl.Location = new Point(0, 0);
+            editControl.Name = "editControl";
+            editControl.Size = new Size(1200, 800);
+            editControl.TabIndex = 3;
+            editControl.Visible = false;
             // 
             // MainFrame
             // 
-            ClientSize = new Size(width, height);
+            BackColor = ColorTranslator.FromHtml("#1f2430");
+            ClientSize = new Size(1200, 800);
             Controls.Add(menuControl);
             Controls.Add(tracksControl);
             Controls.Add(composeControl);
@@ -47,7 +79,7 @@ namespace MusicComposer
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "MainFrame";
-            this.ResumeLayout();
+            ResumeLayout(false);
         }
 
         public void toTracksFromMenu()
@@ -60,7 +92,7 @@ namespace MusicComposer
             menuControl.Show();
         }
 
-        public void toEditFromTracks(string trackName, ArrayList track)
+        public void toEditFromTracks(string trackName, List<Note> track)
         {
             editControl.loadTrack(trackName, track);
             editControl.Show();

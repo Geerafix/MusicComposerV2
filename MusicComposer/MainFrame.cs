@@ -1,10 +1,10 @@
 namespace MusicComposer
 {
-	public partial class MainFrame : Form
-	{
-		public MainFrame()
-		{
-			InitializeComponent();
-		}
-	}
+    public partial class MainFrame : Form
+    {
+        public MainFrame()
+        {
+            InitializeComponent();
+        }
+    }
 }

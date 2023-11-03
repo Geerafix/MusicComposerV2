@@ -30,7 +30,6 @@ namespace MusicComposer
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComposeControl));
             positionLabel = new Label();
             noteCountLabel = new Label();
@@ -53,6 +52,7 @@ namespace MusicComposer
             stopButton = new Button();
             saveButton = new Button();
             trackNameTextBox = new TextBox();
+            SuspendLayout();
             // 
             // positionLabel
             // 
@@ -233,17 +233,17 @@ namespace MusicComposer
             // 
             // trackNotesListBox
             // 
-            trackNotesListBox.BackColor = Color.Teal;
+            trackNotesListBox.BackColor = Color.FromArgb(23, 28, 39);
             trackNotesListBox.BorderStyle = BorderStyle.None;
             trackNotesListBox.Font = new Font("Century Gothic", 14F, FontStyle.Bold, GraphicsUnit.Point);
             trackNotesListBox.ForeColor = Color.Snow;
             trackNotesListBox.FormattingEnabled = true;
             trackNotesListBox.ItemHeight = 27;
-            trackNotesListBox.Location = new Point(887, 70);
+            trackNotesListBox.Location = new Point(898, 64);
             trackNotesListBox.MultiColumn = true;
             trackNotesListBox.Name = "trackNotesListBox";
             trackNotesListBox.SelectionMode = SelectionMode.None;
-            trackNotesListBox.Size = new Size(295, 702);
+            trackNotesListBox.Size = new Size(295, 729);
             trackNotesListBox.TabIndex = 15;
             // 
             // deleteNoteButtton
@@ -303,7 +303,7 @@ namespace MusicComposer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkSlateGray;
+            BackColor = Color.Transparent;
             Controls.Add(trackNameTextBox);
             Controls.Add(saveButton);
             Controls.Add(deleteNoteButtton);
@@ -325,7 +325,8 @@ namespace MusicComposer
             Controls.Add(positionLabel);
             Name = "ComposeControl";
             Size = new Size(1200, 800);
-            this.ResumeLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
         #endregion
 

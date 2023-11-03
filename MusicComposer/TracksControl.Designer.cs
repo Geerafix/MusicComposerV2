@@ -1,4 +1,6 @@
-﻿namespace MusicComposer
+﻿using System.Windows.Forms;
+
+namespace MusicComposer
 {
     partial class TracksControl
     {
@@ -50,9 +52,10 @@
             // 
             // tracksListBox
             // 
-            tracksListBox.BackColor = Color.Teal;
+            tracksListBox.BackColor = Color.FromArgb(23, 28, 39);
             tracksListBox.Cursor = Cursors.Hand;
             tracksListBox.Font = new Font("Century Gothic", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            tracksListBox.ForeColor = Color.White;
             tracksListBox.FormattingEnabled = true;
             tracksListBox.ItemHeight = 26;
             tracksListBox.Location = new Point(121, 288);
@@ -107,7 +110,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkSlateGray;
+            BackColor = Color.Transparent;
             Controls.Add(playTrackButton);
             Controls.Add(modifyTrackButton);
             Controls.Add(deleteTrackButton);
