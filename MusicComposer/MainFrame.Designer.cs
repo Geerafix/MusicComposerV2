@@ -20,6 +20,7 @@ namespace MusicComposer {
         public MidiOut play = new MidiOut(0);
 
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrame));
             tracksControl = new TracksControl();
             composeControl = new ComposeControl();
             editControl = new EditControl();
@@ -71,8 +72,10 @@ namespace MusicComposer {
             Controls.Add(editControl);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "MainFrame";
+            Text = "MusicComposer";
             ResumeLayout(false);
         }
 

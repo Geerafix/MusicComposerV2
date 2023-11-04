@@ -111,22 +111,22 @@
             // noteLabel
             // 
             noteLabel.AutoSize = true;
-            noteLabel.Font = new Font("Century Gothic", 85F, FontStyle.Bold, GraphicsUnit.Point);
+            noteLabel.Font = new Font("Century Gothic", 85.2000046F, FontStyle.Bold, GraphicsUnit.Point);
             noteLabel.ForeColor = Color.MintCream;
             noteLabel.Location = new Point(133, 359);
             noteLabel.Name = "noteLabel";
-            noteLabel.Size = new Size(261, 168);
+            noteLabel.Size = new Size(264, 170);
             noteLabel.TabIndex = 5;
             noteLabel.Text = "C1";
             // 
             // durationLabel
             // 
             durationLabel.AutoSize = true;
-            durationLabel.Font = new Font("Century Gothic", 85F, FontStyle.Bold, GraphicsUnit.Point);
+            durationLabel.Font = new Font("Century Gothic", 85.2000046F, FontStyle.Bold, GraphicsUnit.Point);
             durationLabel.ForeColor = Color.MintCream;
-            durationLabel.Location = new Point(495, 359);
+            durationLabel.Location = new Point(504, 359);
             durationLabel.Name = "durationLabel";
-            durationLabel.Size = new Size(310, 168);
+            durationLabel.Size = new Size(312, 170);
             durationLabel.TabIndex = 6;
             durationLabel.Text = "500";
             // 

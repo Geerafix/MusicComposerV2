@@ -125,7 +125,7 @@ namespace MusicComposer {
             durationLabel.AutoSize = true;
             durationLabel.Font = new Font("Century Gothic", 85F, FontStyle.Bold, GraphicsUnit.Point);
             durationLabel.ForeColor = Color.MintCream;
-            durationLabel.Location = new Point(495, 359);
+            durationLabel.Location = new Point(504, 359);
             durationLabel.Name = "durationLabel";
             durationLabel.Size = new Size(310, 168);
             durationLabel.TabIndex = 6;
