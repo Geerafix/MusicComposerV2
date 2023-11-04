@@ -45,8 +45,7 @@ namespace MusicComposer {
         private void noteUp_Click(object sender, EventArgs e) {
             if (currentNote == notes.Length - 1) {
                 currentNote = 0;
-            }
-            else {
+            } else {
                 ++currentNote;
             }
             noteLabel.Text = noteConv(notes[currentNote]);
@@ -55,8 +54,7 @@ namespace MusicComposer {
         private void noteDown_Click(object sender, EventArgs e) {
             if (currentNote == 0) {
                 currentNote = notes.Length - 1;
-            }
-            else {
+            } else {
                 --currentNote;
             }
             noteLabel.Text = noteConv(notes[currentNote]);
@@ -93,8 +91,7 @@ namespace MusicComposer {
                 pos += 1;
                 position.Text = (pos + 1).ToString();
                 trackNotesListBox.Items.Add(" " + noteConv(notes[currentNote]) + " " + currentDuration);
-            }
-            else if (pos < track.Count) {
+            } else if (pos < track.Count) {
                 track[pos] = new Note(notes[currentNote], currentDuration);
                 trackNotesListBox.Items[pos] = " " + noteConv(notes[currentNote]) + " " + currentDuration;
             }
@@ -107,12 +104,8 @@ namespace MusicComposer {
                     currentNote = track[pos].getNumber() - 24;
                     currentDuration = track[pos].getDuration();
                 }
-                else {
-                    currentNote = 0;
-                    currentDuration = 500;
-                }
 
-                noteLabel.Text = noteConv(notes[currentNote]).ToString();
+                noteLabel.Text = noteConv(notes[currentNote]);
                 durationLabel.Text = currentDuration.ToString();
                 noteCount.Text = track.Count.ToString();
                 trackNotesListBox.Items.RemoveAt(pos);
@@ -157,8 +150,7 @@ namespace MusicComposer {
         }
 
         private void saveButton_Click(object sender, EventArgs e) {
-            StreamWriter writer = new StreamWriter("../../../tracks/" + trackName + ".txt");
-            writer.Flush();
+            StreamWriter writer = new StreamWriter("../../../Tracks/" + trackName + ".txt");
             foreach (Note note in track) {
                 writer.WriteLine(note.getNumber());
                 writer.WriteLine(note.getDuration());
@@ -180,10 +172,6 @@ namespace MusicComposer {
         private string noteConv(int noteNumber) {
             string[] noteNames = { "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B" };
             return noteNames[noteNumber % 12] + ((noteNumber / 12) - 1);
-        }
-
-        private void label1_Click(object sender, EventArgs e) {
-
         }
     }
 }

@@ -6,7 +6,7 @@ namespace MusicComposer {
         private FileInfo[] tracks;
         private DirectoryInfo directory;
         private Thread thread;
-        private string path = "../../../tracks/";
+        private string path = "../../../Tracks/";
         private int id;
 
         public TracksControl() {

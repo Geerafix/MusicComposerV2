@@ -85,14 +85,17 @@ namespace MusicComposer {
             // 
             // toMenuButton
             // 
+            toMenuButton.BackColor = Color.FromArgb(255, 173, 94);
             toMenuButton.Cursor = Cursors.Hand;
+            toMenuButton.FlatAppearance.BorderSize = 0;
+            toMenuButton.FlatStyle = FlatStyle.Flat;
             toMenuButton.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point);
             toMenuButton.Location = new Point(3, 3);
             toMenuButton.Name = "toMenuButton";
             toMenuButton.Size = new Size(60, 60);
             toMenuButton.TabIndex = 3;
             toMenuButton.Text = "Main menu";
-            toMenuButton.UseVisualStyleBackColor = true;
+            toMenuButton.UseVisualStyleBackColor = false;
             toMenuButton.Click += toMenuButton_Click;
             // 
             // noteCount
@@ -133,6 +136,10 @@ namespace MusicComposer {
             noteUp.BackColor = Color.Transparent;
             noteUp.BackgroundImage = (Image)resources.GetObject("noteUp.BackgroundImage");
             noteUp.Cursor = Cursors.Hand;
+            noteUp.FlatAppearance.BorderSize = 0;
+            noteUp.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            noteUp.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            noteUp.FlatStyle = FlatStyle.Flat;
             noteUp.ForeColor = Color.Transparent;
             noteUp.Location = new Point(167, 226);
             noteUp.Name = "noteUp";
@@ -146,6 +153,10 @@ namespace MusicComposer {
             noteDown.BackColor = Color.Transparent;
             noteDown.BackgroundImage = (Image)resources.GetObject("noteDown.BackgroundImage");
             noteDown.Cursor = Cursors.Hand;
+            noteDown.FlatAppearance.BorderSize = 0;
+            noteDown.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            noteDown.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            noteDown.FlatStyle = FlatStyle.Flat;
             noteDown.Location = new Point(167, 529);
             noteDown.Name = "noteDown";
             noteDown.Size = new Size(94, 132);
@@ -157,28 +168,38 @@ namespace MusicComposer {
             // 
             durationUp.BackgroundImage = (Image)resources.GetObject("durationUp.BackgroundImage");
             durationUp.Cursor = Cursors.Hand;
+            durationUp.FlatAppearance.BorderSize = 0;
+            durationUp.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            durationUp.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            durationUp.FlatStyle = FlatStyle.Flat;
             durationUp.Location = new Point(524, 226);
             durationUp.Name = "durationUp";
             durationUp.Size = new Size(94, 132);
             durationUp.TabIndex = 9;
-            durationUp.UseVisualStyleBackColor = true;
+            durationUp.UseVisualStyleBackColor = false;
             durationUp.Click += durationUp_Click;
             // 
             // durationDown
             // 
             durationDown.BackgroundImage = (Image)resources.GetObject("durationDown.BackgroundImage");
             durationDown.Cursor = Cursors.Hand;
+            durationDown.FlatAppearance.BorderSize = 0;
+            durationDown.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            durationDown.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            durationDown.FlatStyle = FlatStyle.Flat;
             durationDown.Location = new Point(524, 529);
             durationDown.Name = "durationDown";
             durationDown.Size = new Size(94, 132);
             durationDown.TabIndex = 10;
-            durationDown.UseVisualStyleBackColor = true;
+            durationDown.UseVisualStyleBackColor = false;
             durationDown.Click += durationDown_Click;
             // 
             // playNoteButton
             // 
+            playNoteButton.BackColor = Color.FromArgb(255, 173, 94);
             playNoteButton.Cursor = Cursors.Hand;
-            playNoteButton.FlatStyle = FlatStyle.System;
+            playNoteButton.FlatAppearance.BorderSize = 0;
+            playNoteButton.FlatStyle = FlatStyle.Flat;
             playNoteButton.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
             playNoteButton.ForeColor = Color.DarkSlateGray;
             playNoteButton.Location = new Point(44, 332);
@@ -186,44 +207,52 @@ namespace MusicComposer {
             playNoteButton.Size = new Size(80, 80);
             playNoteButton.TabIndex = 11;
             playNoteButton.Text = ">";
-            playNoteButton.UseVisualStyleBackColor = true;
+            playNoteButton.UseVisualStyleBackColor = false;
             playNoteButton.Click += playNoteButton_Click;
             // 
             // addNoteButton
             // 
+            addNoteButton.BackColor = Color.FromArgb(255, 173, 94);
             addNoteButton.Cursor = Cursors.Hand;
-            addNoteButton.FlatStyle = FlatStyle.System;
+            addNoteButton.FlatAppearance.BorderSize = 0;
+            addNoteButton.FlatStyle = FlatStyle.Flat;
             addNoteButton.Font = new Font("Century Gothic", 25F, FontStyle.Bold, GraphicsUnit.Point);
             addNoteButton.Location = new Point(44, 418);
             addNoteButton.Name = "addNoteButton";
             addNoteButton.Size = new Size(80, 80);
             addNoteButton.TabIndex = 12;
             addNoteButton.Text = "+";
-            addNoteButton.UseVisualStyleBackColor = true;
+            addNoteButton.UseVisualStyleBackColor = false;
             addNoteButton.Click += addNoteButton_Click;
             // 
             // previousNoteButton
             // 
+            previousNoteButton.BackColor = Color.FromArgb(255, 173, 94);
             previousNoteButton.Cursor = Cursors.Hand;
+            previousNoteButton.FlatAppearance.BorderSize = 0;
+            previousNoteButton.FlatStyle = FlatStyle.Flat;
             previousNoteButton.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            previousNoteButton.Location = new Point(167, 191);
+            previousNoteButton.Location = new Point(167, 169);
             previousNoteButton.Name = "previousNoteButton";
             previousNoteButton.Size = new Size(94, 29);
             previousNoteButton.TabIndex = 13;
             previousNoteButton.Text = "<";
-            previousNoteButton.UseVisualStyleBackColor = true;
+            previousNoteButton.UseVisualStyleBackColor = false;
             previousNoteButton.Click += previousNoteButton_Click;
             // 
             // nextNoteButton
             // 
+            nextNoteButton.BackColor = Color.FromArgb(255, 173, 94);
             nextNoteButton.Cursor = Cursors.Hand;
+            nextNoteButton.FlatAppearance.BorderSize = 0;
+            nextNoteButton.FlatStyle = FlatStyle.Flat;
             nextNoteButton.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            nextNoteButton.Location = new Point(524, 191);
+            nextNoteButton.Location = new Point(524, 169);
             nextNoteButton.Name = "nextNoteButton";
             nextNoteButton.Size = new Size(94, 29);
             nextNoteButton.TabIndex = 14;
             nextNoteButton.Text = ">";
-            nextNoteButton.UseVisualStyleBackColor = true;
+            nextNoteButton.UseVisualStyleBackColor = false;
             nextNoteButton.Click += nextNoteButton_Click;
             // 
             // trackNotesListBox
@@ -243,14 +272,17 @@ namespace MusicComposer {
             // 
             // deleteNoteButtton
             // 
+            deleteNoteButtton.BackColor = Color.FromArgb(255, 173, 94);
             deleteNoteButtton.Cursor = Cursors.Hand;
+            deleteNoteButtton.FlatAppearance.BorderSize = 0;
+            deleteNoteButtton.FlatStyle = FlatStyle.Flat;
             deleteNoteButtton.Font = new Font("Century Gothic", 20F, FontStyle.Bold, GraphicsUnit.Point);
             deleteNoteButtton.Location = new Point(44, 504);
             deleteNoteButtton.Name = "deleteNoteButtton";
             deleteNoteButtton.Size = new Size(80, 80);
             deleteNoteButtton.TabIndex = 16;
             deleteNoteButtton.Text = "X";
-            deleteNoteButtton.UseVisualStyleBackColor = true;
+            deleteNoteButtton.UseVisualStyleBackColor = false;
             deleteNoteButtton.Click += deleteNoteButton_Click;
             // 
             // playButton
@@ -275,24 +307,28 @@ namespace MusicComposer {
             // 
             // saveButton
             // 
+            saveButton.BackColor = Color.FromArgb(255, 173, 94);
             saveButton.Cursor = Cursors.Hand;
+            saveButton.FlatAppearance.BorderSize = 0;
+            saveButton.FlatStyle = FlatStyle.Flat;
             saveButton.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point);
             saveButton.Location = new Point(69, 3);
             saveButton.Name = "saveButton";
             saveButton.Size = new Size(60, 60);
             saveButton.TabIndex = 17;
             saveButton.Text = "Save";
-            saveButton.UseVisualStyleBackColor = true;
+            saveButton.UseVisualStyleBackColor = false;
             saveButton.Click += saveButton_Click;
             // 
             // trackNameTextBox
             // 
-            trackNameTextBox.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            trackNameTextBox.Location = new Point(135, 18);
+            trackNameTextBox.Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            trackNameTextBox.Location = new Point(135, 16);
             trackNameTextBox.Name = "trackNameTextBox";
-            trackNameTextBox.Size = new Size(157, 30);
+            trackNameTextBox.Size = new Size(157, 36);
             trackNameTextBox.TabIndex = 19;
             trackNameTextBox.Visible = false;
+            trackNameTextBox.TextChanged += trackNameTextBox_TextChanged;
             // 
             // ComposeControl
             // 

@@ -33,26 +33,32 @@
             // 
             // exitButton
             // 
+            exitButton.BackColor = Color.FromArgb(255, 173, 94);
             exitButton.Cursor = Cursors.Hand;
+            exitButton.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(exitButton, "exitButton");
             exitButton.Name = "exitButton";
-            exitButton.UseVisualStyleBackColor = true;
+            exitButton.UseVisualStyleBackColor = false;
             exitButton.Click += exitButton_Click;
             // 
             // composeButton
             // 
+            composeButton.BackColor = Color.FromArgb(255, 173, 94);
             composeButton.Cursor = Cursors.Hand;
+            composeButton.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(composeButton, "composeButton");
             composeButton.Name = "composeButton";
-            composeButton.UseVisualStyleBackColor = true;
+            composeButton.UseVisualStyleBackColor = false;
             composeButton.Click += composeButton_Click;
             // 
             // tracksButton
             // 
+            tracksButton.BackColor = Color.FromArgb(255, 173, 94);
             tracksButton.Cursor = Cursors.Hand;
+            tracksButton.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(tracksButton, "tracksButton");
             tracksButton.Name = "tracksButton";
-            tracksButton.UseVisualStyleBackColor = true;
+            tracksButton.UseVisualStyleBackColor = false;
             tracksButton.Click += tracksButton_Click;
             // 
             // titleLabel

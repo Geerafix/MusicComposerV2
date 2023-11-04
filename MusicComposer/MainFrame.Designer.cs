@@ -102,6 +102,7 @@ namespace MusicComposer {
         }
 
         public void toComposeFromMenu() {
+            composeControl.loadTempTrack();
             composeControl.Show();
         }
         public void toMenuFromCompose() {

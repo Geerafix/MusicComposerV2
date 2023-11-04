@@ -31,7 +31,10 @@ namespace MusicComposer {
             menuButton.Size = new Size(200, 100);
             menuButton.TabIndex = 2;
             menuButton.Text = "Main menu";
-            menuButton.UseVisualStyleBackColor = true;
+            menuButton.UseVisualStyleBackColor = false;
+            menuButton.BackColor = ColorTranslator.FromHtml("#ffad5e");
+            menuButton.FlatAppearance.BorderSize = 0;
+            menuButton.FlatStyle = FlatStyle.Flat;
             menuButton.Click += menuButton_Click;
             // 
             // tracksLabel
@@ -69,8 +72,11 @@ namespace MusicComposer {
             deleteTrackButton.Size = new Size(50, 50);
             deleteTrackButton.TabIndex = 6;
             deleteTrackButton.Text = "X";
-            deleteTrackButton.UseVisualStyleBackColor = true;
+            deleteTrackButton.UseVisualStyleBackColor = false;
             deleteTrackButton.Visible = false;
+            deleteTrackButton.BackColor = ColorTranslator.FromHtml("#ffad5e");
+            deleteTrackButton.FlatAppearance.BorderSize = 0;
+            deleteTrackButton.FlatStyle = FlatStyle.Flat;
             deleteTrackButton.Click += deleteButton_Click;
             // 
             // modifyTrackButton
@@ -85,6 +91,9 @@ namespace MusicComposer {
             modifyTrackButton.Text = "✎";
             modifyTrackButton.UseVisualStyleBackColor = true;
             modifyTrackButton.Visible = false;
+            modifyTrackButton.BackColor = ColorTranslator.FromHtml("#ffad5e");
+            modifyTrackButton.FlatAppearance.BorderSize = 0;
+            modifyTrackButton.FlatStyle = FlatStyle.Flat;
             modifyTrackButton.Click += modifyTrackButton_Click;
             // 
             // playTrackButton
@@ -97,8 +106,11 @@ namespace MusicComposer {
             playTrackButton.Size = new Size(50, 50);
             playTrackButton.TabIndex = 8;
             playTrackButton.Text = ">";
-            playTrackButton.UseVisualStyleBackColor = true;
+            playTrackButton.UseVisualStyleBackColor = false;
             playTrackButton.Visible = false;
+            playTrackButton.BackColor = ColorTranslator.FromHtml("#ffad5e");
+            playTrackButton.FlatAppearance.BorderSize = 0;
+            playTrackButton.FlatStyle = FlatStyle.Flat;
             playTrackButton.Click += playTrackButton_Click;
             // 
             // TracksControl
